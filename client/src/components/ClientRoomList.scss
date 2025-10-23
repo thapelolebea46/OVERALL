@@ -191,3 +191,68 @@
     transform: scale(1);
   }
 }
+/* Fade animation for modal overlay */
+.image-modal-overlay {
+  animation: fadeIn 0.3s forwards;
+
+  &.fade-out {
+    animation: fadeOut 0.3s forwards;
+  }
+}
+
+/* Modal slide & image transitions */
+.image-modal img {
+  opacity: 0;
+  animation: imageFade 0.4s ease forwards;
+}
+
+@keyframes imageFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Filter controls */
+.filter-controls {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap; /* ensures nice wrapping on mobile */
+
+  select {
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: #4caf50;
+      box-shadow: 0 0 4px rgba(76, 175, 80, 0.3);
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}

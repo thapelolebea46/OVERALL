@@ -1,11 +1,11 @@
 import React from "react";
-import RoomsClient from "./RoomsClient";
 import { roomsData } from "./roomsData";
+import ClientRoomList from "./ClientRoomList";
 
 
 
 const Home = () => {
-  return <RoomsClient rooms={roomsData} />;
+  return <ClientRoomList rooms={roomsData}/>;
 };
 
 export default Home;
