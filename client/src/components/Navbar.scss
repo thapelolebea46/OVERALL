@@ -1,0 +1,70 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  .navbar-logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .navbar-title {
+    flex: 1;
+    text-align: center;
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      background: linear-gradient(to right, #fff, #c8e6c9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease forwards;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+
+    .navbar-logo img {
+      height: 45px;
+      width: 45px;
+      margin-bottom: 0.5rem;
+    }
+
+    .navbar-title h1 {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
