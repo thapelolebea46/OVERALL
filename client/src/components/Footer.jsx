@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-info">
-        <p>📍 45 Palm Street, East London, South Africa</p>
+        <p>📍 45 Palm Street, Alex, South Africa</p>
         <p>📞 +27 71 234 5678 | ✉️ info@masiyanda.co.za</p>
         <p>© {new Date().getFullYear()} Masiyanda Guest House — All Rights Reserved.</p>
       </div>
